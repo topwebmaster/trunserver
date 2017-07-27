@@ -46,10 +46,7 @@ def wsgi_resource():
 
 
 class Command(BaseCommand):
-    option_list = BaseCommand.option_list + (
-        make_option('--noreload', action='store_false', dest='use_reloader',
-            default=True, help='Do NOT use the auto-reloader.'),
-    )
+
     help = "Starts a Twisted Web server for development."
     args = '[optional port number, or ipaddr:port]'
 
