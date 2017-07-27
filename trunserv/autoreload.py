@@ -32,7 +32,7 @@
 import os, sys, time
 
 try:
-    import _thread
+    import _thread as thread
 except ImportError:
     import _dummy_thread as thread
 
