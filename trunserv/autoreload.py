@@ -32,9 +32,9 @@
 import os, sys, time
 
 try:
-    import thread
+    import _thread
 except ImportError:
-    import dummy_thread as thread
+    import _dummy_thread as thread
 
 # This import does nothing, but it's necessary to avoid some race conditions
 # in the threading module. See http://code.djangoproject.com/ticket/2330 .
