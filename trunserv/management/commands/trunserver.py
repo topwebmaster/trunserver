@@ -55,6 +55,11 @@ class Command(BaseCommand):
 
     # Validation is called explicitly each time the server is reloaded.
     requires_model_validation = False
+    def add_arguments(self, parser):
+        # Positional arguments
+        make_option('--noreload', action='store_false', dest='use_reloader',
+            default=True, help='Do NOT use the auto-reloader.')
+
 
     def handle(self, addrport='', *args, **options):
         if not addrport:
